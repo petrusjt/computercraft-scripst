@@ -1,7 +1,8 @@
 function findSeedsToPlant()
     for i = 1, 16 do
         turtle.select(i)
-        if turtle.getItemDetail().name == "minecraft:wheat_seeds" then
+        local itemDetail = turtle.getItemDetail()
+        if itemDetail ~= nil and itemDetail.name == "minecraft:wheat_seeds" then
             io.write("Found seeds in inventory\n")
             break
         end
