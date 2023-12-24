@@ -10,7 +10,7 @@ end
 
 function farm4x1()
     for i = 1, 4 do
-        local blockUnder = turtle.detectDown()
+        local blockUnder = turtle.inspectDown()
         if blockUnder.name == "minecraft:wheat" and blockUnder.level == 7 then
             --turtle.digDown()
             io.write("Harvesting wheat\n")
