@@ -10,7 +10,7 @@ function findSeedsToPlant()
 end
 
 function farm4x1()
-    for i = 1, 3 do
+    for i = 1, 4 do
         local hasBlock, data = turtle.inspectDown()
         if hasBlock and data.name == "minecraft:wheat" and data.state.age == 7 then
             turtle.digDown()
@@ -27,18 +27,22 @@ end
 
 function farm4x4()
     farm4x1()
+    turtle.back()
     turtle.turnRight()
     turtle.forward()
     turtle.turnRight()
     farm4x1()
+    turtle.back()
     turtle.turnLeft()
     turtle.forward()
     turtle.turnLeft()
     farm4x1()
+    turtle.back()
     turtle.turnRight()
     turtle.forward()
     turtle.turnRight()
     farm4x1()
+    turtle.back()
     turtle.turnLeft()
     turtle.forward()
     turtle.turnLeft()
